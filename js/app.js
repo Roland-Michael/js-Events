@@ -59,16 +59,45 @@ function showPrice(){
 //7. Mr. Buttons
 /*Add an Event Listener to the button that will display `myQuote` inside the paragraph with the id of `displayQuote` after the button is clicked.*/
 
-var myQuote = "Our lives are defined by opportunities; even the ones we miss.";
+Benjamin.addEventListener('click', quoteFunction);
+function quoteFunction(){
+    var myQuote = "Our lives are defined by opportunities; even the ones we miss.";
+    displayQuote.innerHTML = myQuote;
 
-
+}
 //8. Say It again, Randomly
 /*Create a function that will generate a random quote from the variable below after clicking on the button.*/
 
-var quotes = ["It's a funny thing about comin' home. Looks the same, smells the same, feels the same. You'll realize what's changed is you.", "Momma? Momma? Some days, I feel different than the day before.", "Some people, were born to sit by a river. Some get struck by lightning. Some have an ear for music. Some are artists. Some swim. Some know buttons. Some know Shakespeare. Some are mothers. And some people, dance.", "For what it's worth, it's never too late to be whoever you want to be."];
+random.addEventListener('click', randQuote);
 
+function randQuote(){
+    var quotes = ["It's a funny thing about comin' home. Looks the same, smells the same, feels the same. You'll realize what's changed is you.", "Momma? Momma? Some days, I feel different than the day before.", "Some people, were born to sit by a river. Some get struck by lightning. Some have an ear for music. Some are artists. Some swim. Some know buttons. Some know Shakespeare. Some are mothers. And some people, dance.", "For what it's worth, it's never too late to be whoever you want to be."];
+    
+    var rand = quotes[Math.floor(Math.random() * quotes.length)];
+
+    displayQuotes.innerHTML = rand;
+
+}
 
 
 //9. Unlock the Secret to Financial Freedom
 /*Create an event listener that will show and hide the message when clicking on the button.
+*/
+showHide.addEventListener('click', magic);
+
+function magic(){
+    if(showmoney.style.display === "none"){
+        showmoney.style.display = "initial";
+        showHide.innerHTML = "Hide the Secret";
+    }else{
+        showmoney.style.display = "none";
+        showHide.innerHTML = "Get Secret Now";
+    }
+}
+/*if(showmoney.innerHTML === false){
+    catmoney.innerHTML = 
+}else{
+  main.style.backgroundColor = "gold";
+ }
+}
 */
